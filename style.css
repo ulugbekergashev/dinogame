@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+  }
+  *, 
+  *::before, 
+  *::after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .world{
+      width: 600px;
+      height: 250px;
+      margin: auto;
+      overflow: hidden;
+  }
+  
+  .dino{
+      width: 50px;
+      height: 70px;
+      background-image: url(images/dinoimg.png);
+      /* background: blue; */
+      background-size: 50px 60px;
+      background-repeat: no-repeat;
+      position: relative;
+      top:161px;
+      left: 20px;
+      z-index: -10;
+  }
+  .cactus{
+      width: 30px;
+      height: 50px;
+      background-image: url(images/cactusimg.png);
+      /* background: black; */
+      background-size: 30px 50px;
+      position: relative;
+      background-repeat: no-repeat;
+      top: 100px;
+      left: 830px;
+      z-index: -1;
+  }
+  .ground{
+    position: relative;
+    background-image: url(images/ground.png);
+    width: 150px;
+    height: 25px;
+    background-size: cover;
+    top: 90px;
+    
+  }
+  .score{
+    position: relative;
+    top: 70px;
+    left: 70%;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(73, 73, 73);
+  }
+  .score-value{
+    font-size: 22px;
+    color: black;
+  }
+  .ground-width{
+    width: 650px;
+    animation: groundanimation 0.5s linear infinite;
+
+  }
+  .cactus-animation{
+    animation: cactusanimation infinite 1.8s linear;
+  }
+  @keyframes cactusanimation{
+      100%{
+          left: -35px;
+      }
+  }
+  @keyframes groundanimation{
+    100%{
+      left: -40px;
+    }
+  }
+
+  .jump{
+    animation: jumpanimation 0.8s linear;
+  }
+  @keyframes jumpanimation {
+    0%{
+      top: 165px;
+    }
+    30%{
+      top: 80px;
+    }
+    50%{
+      top: 50px;
+    }
+    80%{
+      top: 95px;
+    }
+    100%{
+      top: 165px;
+    }
+  }
